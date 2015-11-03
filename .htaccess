@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^ibg.local$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.ibg.local$
+RewriteCond %{REQUEST_URI} !basic/web/
+RewriteRule (.*) /basic/web/$1 [L]
